@@ -1,9 +1,10 @@
 <div class="navbar">
   <div class="navbar-inner">
-    <div class='left'>
-      <a href='#' class='link icon-only open-panel'>
-        <i class='icon icon-bars-blue'></i>
-      </a>
+    <div class="left sliding">
+      <%= link_to posts_path, class: 'back link' do %>
+        <i class='icon icon-back-blue'></i>
+        <span>Back</span>
+      <% end %>
     </div>
     <div class='center'>
       <%= @post.title %>
@@ -13,6 +14,11 @@
 
 <div class='page'>
   <div class='page-content'>
-    
+    <div class='content-block-title'><%= @post.title %></div>
+    <div class='content-block'>
+      <div class='content-block-inner'>
+        <%= simple_format @post.body %>
+      </div>
+    </div>
   </div>
 </div>
