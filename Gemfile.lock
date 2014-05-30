@@ -57,6 +57,8 @@ GEM
     diffy (3.0.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    font-awesome-sass (4.1.0)
+      sass (~> 3.2)
     grit (2.5.0)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
@@ -197,6 +199,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.1.0)
   browser
   coffee-rails (~> 4.0.0)
+  font-awesome-sass
   jazz_hands
   jbuilder (~> 1.2)
   jquery-rails

@@ -9,6 +9,7 @@ gem 'redis'
 gem 'redis-namespace'
 
 gem 'browser'
+gem 'font-awesome-sass'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

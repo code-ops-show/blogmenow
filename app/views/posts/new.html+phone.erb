@@ -1,0 +1,54 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding">
+      <%= link_to posts_path, class: 'back link' do %>
+        <i class='icon icon-back-blue'></i>
+        <span>Back</span>
+      <% end %>
+    </div>
+    <div class='center'>
+      <%= @post.title %>
+    </div>
+  </div>
+</div>
+
+<div class='page'>
+  <div class='page-content'>
+    <div class='content-block-title'>
+      New Post
+    </div>
+    <%= form_for @post do |f| %>
+    <div class='list-block'>
+      <ul>
+        <li>
+          <div class='item-content'>
+            <div class='item-inner'>
+              <div class='item-title label'>Title</div>
+              <div class='item-input'>
+                <%= f.text_field :title %>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class='align-top'>
+          <div class='item-content'>
+            <div class='item-inner'>
+              <div class='item-title label'>Body</div>
+              <div class='item-input'>
+                <%= f.text_area :body %>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class='content-block'>
+      <div class='row'>
+        <div class='col-100'>
+          <%= f.submit "Save", class: 'button button-big button-submit' %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
