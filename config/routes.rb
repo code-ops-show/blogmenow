@@ -3,5 +3,5 @@ Blogmenow::Application.routes.draw do
     resources :comments
   end
   
-  root to: 'posts#index'
+  root to: "pages#show", id: 'home'
 end

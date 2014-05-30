@@ -1,5 +1,11 @@
 window.F7H =
-  app: new Framework7()
+  app: new Framework7
+    pushState: true
+    onAjaxStart: (xhr) ->
+      F7H.app.showIndicator()
+    onAjaxComplete: (xhr) -> 
+      F7H.app.hideIndicator()
+      
   dom: Framework7.$
 
 window.Phone =
