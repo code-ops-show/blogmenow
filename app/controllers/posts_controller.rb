@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_filter :mobile_redirect, if: :ensure_mobile?
 
   def index
-    @posts = Post.all
+    @posts = Post.published
     respond_with @posts, layout: render_layout?
   end
 
