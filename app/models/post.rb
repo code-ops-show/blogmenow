@@ -6,4 +6,9 @@ class Post < ActiveRecord::Base
 
   validates :title, presence: true
   has_many :comments
+
+  has_many :taggings
+  has_many :tags, through: :taggings
+
+  belongs_to :category
 end

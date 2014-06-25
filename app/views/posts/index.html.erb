@@ -1,5 +1,11 @@
 <%= link_to "New Post", new_post_path %>
 
+<div id='categories'>
+  <% @categories.each do |category| %>
+    <h2><%= "#{category.name} (#{category.posts.count})" %><h2>
+  <% end %>
+</div>
+
 <div id='posts'>
   <%= render @posts %>
 </div>

@@ -37,7 +37,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'pry'
 
 group :development, :test do 
-  gem 'jazz_hands'
+  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+  gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'quiet_assets'
 end
