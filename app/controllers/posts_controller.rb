@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @categories = Category.all
-    @posts = Post.published
+    @posts = Post.published.limit(10)
     respond_with @posts, layout: render_layout?
   end
 

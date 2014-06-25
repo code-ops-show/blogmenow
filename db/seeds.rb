@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-["Short Episodes", "Series", "Paid", "Free"].each do |c|
+["Short Episodes", "Series", "Paid", "Free", "Yo", "Hey"].each do |c|
   Category.create(name: c)
 end
 
@@ -24,7 +24,7 @@ end
 end
 
 Post.all.each do |p|
-  tags = Tag.all.sample(3)
+  tags = Tag.all.sample([1,2,3,4,5].sample)
   p.tags = tags
   p.save
 end
