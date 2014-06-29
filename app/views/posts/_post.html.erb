@@ -3,7 +3,7 @@
     <h2><%= link_to post.title, post %></h2>
     <div>
       <% post.tags.each do |tag| %>
-        <%= "#{tag.name} (#{tag.posts.count})" %>
+        <%= "#{tag.name} (#{@tags_posts_count[tag.id]})" %>
       <% end %>
     </div>
 
