@@ -4,8 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @categories = Category.with_posts_count
-    @tags_posts_count = Tagging.group("taggings.tag_id").count
-    @posts = Post.published.includes(:tags).limit(100)
+    @posts = Post.published.with_tags_and_count.limit(100)
     respond_with @posts, layout: render_layout?
   end
 
