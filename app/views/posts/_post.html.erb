@@ -2,8 +2,8 @@
   <div class='col-md-10'>
     <h2><%= link_to post.title, post %></h2>
     <div>
-      <% post.tags.each do |tag| %>
-        <%= "#{tag.name} (#{@tags_posts_count[tag.id]})" %>
+      <% post.tags_with_count.each do |tag| %>
+        <%= "#{tag['name']} (#{tag['posts_count']})" %>
       <% end %>
     </div>
 
